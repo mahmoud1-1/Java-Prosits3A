@@ -1,48 +1,17 @@
 package tn.esprit.gestionzoo.main;
-
-import tn.esprit.gestionzoo.entities.Animal;
-import tn.esprit.gestionzoo.entities.Zoo;
+import tn.esprit.gestionzoo.entities.*;
 
 public class ZooManagement {
 
     public static void main(String[] args) {
-        Animal lion = new Animal();
-        lion.setName("Simba");
-        lion.setAge(8);
-        lion.setFamily("Cats");
-        lion.setMammal(true);
+        Aquatic aquaticAnimal = new Aquatic("Fish", "Salmon", 2, false, "Water habitat");
 
-        Zoo myZoo = new Zoo("Wildlife Park", "Ariana");
-        Zoo notMyZoo = new Zoo("WaterPark", "Siliana");
+        Dolphin dolphin = new Dolphin("Ocean", 25.5f);
+        Penguin penguin = new Penguin("Antarctic", 10.0f);
 
-
-        Animal dog = new Animal("Canine", "Snoopy", 2, true);
-
-
-        System.out.println(myZoo.addAnimal(lion));
-        System.out.println(myZoo.addAnimal(dog));
-
-        myZoo.displayAnimals();
-
-        System.out.println(myZoo.searchAnimal(dog));
-        Animal dog2 = new Animal("Canine", "lll", 2, true);
-        System.out.println(myZoo.searchAnimal(dog2));
-
-//           System.out.println(myZoo.removeAnimal(dog));
-        myZoo.displayAnimals();
-
-
-        System.out.println(myZoo);
-
-        myZoo.addAnimal(lion);
-        myZoo.addAnimal(dog);
-        myZoo.addAnimal(dog2);
-        myZoo.displayAnimals();
-
-
-        myZoo.setName("Belvedere Park");
-        Zoo notMyZoo1 = Zoo.comparerZoo(myZoo, notMyZoo);
-        System.out.println(notMyZoo1);
+        System.out.println(aquaticAnimal);
+        System.out.println(dolphin);
+        System.out.println(penguin);
 
 
     }
